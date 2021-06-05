@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "contact")
+@Table(name = "BLA")
 public class Contact implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -20,29 +20,29 @@ public class Contact implements Serializable {
 	private Long id;
 
 	@Column(unique = false, nullable = false)
-	private String nome;
+	private String name;
 
 	@Column(unique = true, nullable = false)
 	private String email;
 
 	@Column(unique = false, nullable = false)
-	private String telefone;
+	private String telephone;
 
 	public Contact() {
 	}
 
-	public Contact(String nome, String email, String telefone) {
-		this.nome = nome;
+	public Contact(String name, String email, String telephone) {
+		this.name = name;
 		this.email = email;
-		this.telefone = telefone;
+		this.telephone = telephone;
 	}
 
-	public Contact(Long id, String nome, String email, String telefone) {
+	public Contact(Long id, String name, String email, String telephone) {
 		super();
 		this.id = id;
-		this.nome = nome;
+		this.name = name;
 		this.email = email;
-		this.telefone = telefone;
+		this.telephone = telephone;
 	}
 
 	public Long getId() {
@@ -53,12 +53,12 @@ public class Contact implements Serializable {
 		this.id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getName() {
+		return name;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getEmail() {
@@ -69,17 +69,17 @@ public class Contact implements Serializable {
 		this.email = email;
 	}
 
-	public String getTelefone() {
-		return telefone;
+	public String getTelephone() {
+		return telephone;
 	}
 
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
 	}
 
 	@Override
 	public String toString() {
-		return "Nome: " + getNome() + "| Email: " + getEmail() + " | Telefone: " + getTelefone();
+		return "Name: " + getName() + "| Email: " + getEmail() + " | Telefone: " + getTelephone();
 	}
 
 }
