@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @EnableEurekaClient
+//@FeignClient(name = "cb-core", path = "core")
 @SpringBootApplication
 public class ContactBookCoreApplication {
 
